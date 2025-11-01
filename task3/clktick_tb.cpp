@@ -2,7 +2,7 @@
 #include "verilated.h"
 #include "verilated_vcd_c.h"
 
-#include "../vbuddy.cpp" // include vbuddy code
+#include "vbuddy.cpp" // include vbuddy code
 #define MAX_SIM_CYC 100000
 
 int main(int argc, char **argv, char **env)

@@ -15,15 +15,15 @@ always_ff @ (posedge clk)
     if (rst) begin
         tick <= 1'b0;
         count <= N;  
-        end
-    else if (en) begin
-        if (count == 0) begin
-            tick <= 1'b1;
-            count <= N;
+    end else begin
+        tick <= 1'b0;
+        if (en) begin
+            if (count == 0) begin
+                tick <= 1'b1;
+                count <= N;
+            end else begin
+                count <= count - 1'b1;
             end
-        else begin
-            tick <= 1'b0;
-            count <= count - 1'b1;
-            end
         end
+    end
 endmodule
