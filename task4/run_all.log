@@ -1,0 +1,20 @@
+[RUN] Cleaning
+[RUN] Verilating
+[RUN] Building
+make: Entering directory '/home/ananya/Documents/iac/Lab3-FSM/task4/obj_dir'
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++17 -Os -c -o f1_light_tb_headless.o ../f1_light_tb_headless.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++17 -Os -c -o verilated.o /usr/local/share/verilator/include/verilated.cpp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++17 -Os -c -o verilated_vcd_c.o /usr/local/share/verilator/include/verilated_vcd_c.cpp
+/usr/bin/perl /usr/local/share/verilator/bin/verilator_includer -DVL_INCLUDE_OPT=include Vf1_light.cpp Vf1_light___024root__DepSet_ha97465ec__0.cpp Vf1_light__Trace__0.cpp Vf1_light__ConstPool_0.cpp Vf1_light___024root__Slow.cpp Vf1_light___024root__DepSet_ha97465ec__0__Slow.cpp Vf1_light__Syms.cpp Vf1_light__Trace__0__Slow.cpp > Vf1_light__ALL.cpp
+echo "" > Vf1_light__ALL.verilator_deplist.tmp
+ccache g++  -I.  -MMD -I/usr/local/share/verilator/include -I/usr/local/share/verilator/include/vltstd -DVM_COVERAGE=0 -DVM_SC=0 -DVM_TRACE=1 -DVM_TRACE_FST=0 -DVM_TRACE_VCD=1 -faligned-new -fcf-protection=none -Wno-bool-operation -Wno-sign-compare -Wno-uninitialized -Wno-unused-but-set-variable -Wno-unused-parameter -Wno-unused-variable -Wno-shadow      -std=gnu++17 -Os -c -o Vf1_light__ALL.o Vf1_light__ALL.cpp
+Archive ar -rcs Vf1_light__ALL.a Vf1_light__ALL.o
+g++    f1_light_tb_headless.o verilated.o verilated_vcd_c.o Vf1_light__ALL.a      -o Vf1_light
+rm Vf1_light__ALL.verilator_deplist.tmp
+make: Leaving directory '/home/ananya/Documents/iac/Lab3-FSM/task4/obj_dir'
+[RUN] Running
+[TB] start
+[TB] cyc=0 data_out=0x00
+[TB] done
+[RUN] Exit code: 0
+[RUN] Done. See run_all.log

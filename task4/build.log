@@ -1,0 +1,34 @@
+%Warning-WIDTH: lfsr_7.sv:11:18: Operator ASSIGNDLY expects 8 bits on the Assign RHS, but Assign RHS's CONST '4'h1' generates 4 bits.
+                               : ... In instance f1_light.lfsr
+   11 |             sreg <= 4'b0001;
+      |                  ^~
+                ... For warning description see https://verilator.org/warn/WIDTH?v=4.226
+                ... Use "/* verilator lint_off WIDTH */" and lint_on around source to disable this message.
+%Warning-WIDTH: lfsr_7.sv:15:21: Operator ASSIGNW expects 7 bits on the Assign RHS, but Assign RHS's VARREF 'sreg' generates 8 bits.
+                               : ... In instance f1_light.lfsr
+   15 |     assign data_out = sreg;
+      |                     ^
+%Warning-UNUSED: lfsr_7.sv:7:17: Bits of signal are not used: 'sreg'[8]
+                               : ... In instance f1_light.lfsr
+    7 |     logic [8:1] sreg; 
+      |                 ^~~~
+%Warning-UNUSED: f1_fsm.sv:5:17: Signal is not used: 'trigger'
+                               : ... In instance f1_light.fsm
+    5 |     input logic trigger,
+      |                 ^~~~~~~
+%Warning-UNDRIVEN: f1_fsm.sv:7:18: Signal is not driven: 'cmd_seq'
+                                 : ... In instance f1_light.fsm
+    7 |     output logic cmd_seq,
+      |                  ^~~~~~~
+%Warning-UNDRIVEN: f1_fsm.sv:8:18: Signal is not driven: 'cmd_delay'
+                                 : ... In instance f1_light.fsm
+    8 |     output logic cmd_delay
+      |                  ^~~~~~~~~
+%Warning-SYNCASYNCNET: f1_light.sv:5:32: Signal flopped as both synchronous and async: 'rst'
+                       lfsr_7.sv:10:13: ... Location of async usage
+   10 |         if (rst)
+      |             ^~~
+                       f1_fsm.sv:15:13: ... Location of sync usage
+   15 |         if (rst) current_state <= S0;
+      |             ^~~
+%Error: Exiting due to 7 warning(s)
